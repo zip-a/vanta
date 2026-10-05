@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="VANTA — современный интернет-магазин"
+    >
+
+    <title>VANTA — магазин</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="header">
+
+    <a
+        href="#"
+        class="logo"
+    >
+        VANTA<span>.</span>
+    </a>
+
+
+    <nav class="navigation">
+
+        <a href="#catalog">
+            Каталог
+        </a>
+
+        <a href="#about">
+            О магазине
+        </a>
+
+        <a href="#contacts">
+            Контакты
+        </a>
+
+    </nav>
+
+
+    <div class="header-actions">
+
+        <button
+            class="icon-button cart-button"
+            id="openCart"
+            aria-label="Открыть корзину"
+        >
+
+            🛒
+
+            <span id="cartCount">
+                0
+            </span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            НОВАЯ КОЛЛЕКЦИЯ
+        </div>
+
+
+        <h1>
+
+            Вещи, которые
+
+            <span>
+                выбирают стиль.
+            </span>
+
+        </h1>
+
+
+        <p>
+            Современные товары для тех,
+            кто ценит качество, дизайн
+            и детали.
+        </p>
+
+
+        <a
+            href="#catalog"
+            class="hero-button"
+        >
+
+            Смотреть товары
+
+            <span>
+                →
+            </span>
+
+        </a>
+
+    </div>
+
+
+    <div class="hero-visual">
+
+        <div class="hero-glow"></div>
+
+
+        <img
+            src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85"
+            alt="Премиальные часы"
+        >
+
+
+        <div class="floating-card">
+
+            <span>
+                BESTSELLER
+            </span>
+
+            <strong>
+                Premium Collection
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     CATALOG
+========================================= -->
+
+<section
+    class="catalog"
+    id="catalog"
+>
+
+    <div class="section-heading">
+
+        <div>
+
+            <p class="eyebrow">
+                КАТАЛОГ
+            </p>
+
+            <h2>
+                Популярные товары
+            </h2>
+
+        </div>
+
+
+        <div class="search-box">
+
+            <span>
+                ⌕
+            </span>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Поиск товара..."
+            >
+
+        </div>
+
+    </div>
+
+
+
+    <div
+        class="categories"
+        id="categories"
+    >
+
+        <button
+            class="category active"
+            data-category="Все"
+        >
+            Все
+        </button>
+
+
+        <button
+            class="category"
+            data-category="Техника"
+        >
+            Техника
+        </button>
+
+
+        <button
+            class="category"
+            data-category="Аксессуары"
+        >
+            Аксессуары
+        </button>
+
+
+        <button
+            class="category"
+            data-category="Обувь"
+        >
+            Обувь
+        </button>
+
+
+        <button
+            class="category"
+            data-category="Дом"
+        >
+            Дом
+        </button>
+
+    </div>
+
+
+
+    <div
+        class="products"
+        id="productsContainer"
+    ></div>
+
+
+    <div
+        class="empty-state"
+        id="emptyState"
+    >
+
+        <div>
+            🔎
+        </div>
+
+        <h3>
+            Ничего не найдено
+        </h3>
+
+        <p>
+            Попробуйте изменить запрос
+            или категорию.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     ABOUT
+========================================= -->
+
+<section
+    class="about"
+    id="about"
+>
+
+    <div class="about-card">
+
+        <p class="eyebrow">
+            ПОЧЕМУ МЫ
+        </p>
+
+
+        <h2>
+
+            Не просто магазин.
+
+            <span>
+                Нормальный сервис.
+            </span>
+
+        </h2>
+
+
+        <p class="about-text">
+
+            Мы собираем товары, которые сами
+            хотели бы использовать. Простая
+            покупка, понятные цены и быстрая
+            связь с магазином.
+
+        </p>
+
+
+        <div class="advantages">
+
+            <div class="advantage">
+
+                <strong>
+                    01
+                </strong>
+
+                <span>
+                    Качественные товары
+                </span>
+
+            </div>
+
+
+            <div class="advantage">
+
+                <strong>
+                    02
+                </strong>
+
+                <span>
+                    Быстрая доставка
+                </span>
+
+            </div>
+
+
+            <div class="advantage">
+
+                <strong>
+                    03
+                </strong>
+
+                <span>
+                    Поддержка каждый день
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     CONTACTS
+========================================= -->
+
+<section
+    class="contacts"
+    id="contacts"
+>
+
+    <div>
+
+        <p class="eyebrow">
+            КОНТАКТЫ
+        </p>
+
+
+        <h2>
+            Остались вопросы?
+        </h2>
+
+
+        <p>
+            Напишите нам — ответим и поможем
+            подобрать товар.
+        </p>
+
+    </div>
+
+
+    <div class="contact-buttons">
+
+        <a
+            href="tel:+992901234567"
+            class="contact-button"
+        >
+            📞 +992 90 123 45 67
+        </a>
+
+
+        <a
+            href="https://wa.me/992037486060"
+            target="_blank"
+            class="contact-button whatsapp"
+        >
+            WhatsApp
+        </a>
+
+
+        <a
+            href="https://t.me/demo_shop"
+            target="_blank"
+            class="contact-button telegram"
+        >
+            Telegram
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    <div>
+
+        <strong>
+            VANTA<span>.</span>
+        </strong>
+
+        <p>
+            Современный магазин.
+        </p>
+
+    </div>
+
+
+    <p>
+        © 2026 VANTA. Все права защищены.
+    </p>
+
+</footer>
+
+
+
+<!-- =========================================
+     OVERLAY
+========================================= -->
+
+<div
+    class="overlay"
+    id="overlay"
+></div>
+
+
+
+<!-- =========================================
+     CART
+========================================= -->
+
+<aside
+    class="cart"
+    id="cart"
+>
+
+    <div class="cart-header">
+
+        <h2>
+            Корзина
+        </h2>
+
+
+        <button
+            id="closeCart"
+            class="close-button"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <div
+        class="cart-items"
+        id="cartItems"
+    ></div>
+
+
+    <div class="cart-footer">
+
+        <div class="cart-total">
+
+            <span>
+                Итого
+            </span>
+
+            <strong id="cartTotal">
+                0 сомони
+            </strong>
+
+        </div>
+
+
+        <button
+            class="checkout-button"
+            id="checkoutButton"
+        >
+            Оформить заказ →
+        </button>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =========================================
+     PRODUCT MODAL
+========================================= -->
+
+<div
+    class="product-modal"
+    id="productModal"
+>
+
+    <div class="product-modal-box">
+
+
+        <button
+            class="product-modal-close"
+            id="closeProductModal"
+        >
+            ×
+        </button>
+
+
+        <div class="product-modal-image">
+
+            <img
+                id="modalProductImage"
+                src=""
+                alt=""
+            >
+
+        </div>
+
+
+        <div class="product-modal-info">
+
+            <div
+                class="product-modal-category"
+                id="modalProductCategory"
+            ></div>
+
+
+            <h2
+                id="modalProductName"
+            ></h2>
+
+
+            <div
+                class="product-modal-rating"
+                id="modalProductRating"
+            ></div>
+
+
+            <p
+                class="product-modal-description"
+                id="modalProductDescription"
+            ></p>
+
+
+            <div
+                class="product-modal-price"
+                id="modalProductPrice"
+            ></div>
+
+
+            <button
+                class="product-modal-add"
+                id="modalAddButton"
+            >
+                Добавить в корзину
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================
+     CHECKOUT MODAL
+========================================= -->
+
+<div
+    class="checkout-modal"
+    id="checkoutModal"
+>
+
+    <div class="checkout-box">
+
+
+        <button
+            class="checkout-close"
+            id="closeCheckout"
+        >
+            ×
+        </button>
+
+
+        <div class="checkout-header">
+
+            <p class="eyebrow">
+                ОФОРМЛЕНИЕ
+            </p>
+
+
+            <h2>
+                Оформить заказ
+            </h2>
+
+
+            <p>
+                Заполните данные, и мы свяжемся
+                с вами для подтверждения.
+            </p>
+
+        </div>
+
+
+        <form id="checkoutForm">
+
+
+            <div class="checkout-field">
+
+                <label for="customerName">
+                    Ваше имя
+                </label>
+
+
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Например, Анас"
+                    required
+                >
+
+            </div>
+
+
+
+            <div class="checkout-field">
+
+                <label for="customerPhone">
+                    Номер телефона
+                </label>
+
+
+                <input
+                    type="tel"
+                    id="customerPhone"
+                    placeholder="+992 90 123 45 67"
+                    required
+                >
+
+            </div>
+
+
+
+            <div class="checkout-field">
+
+                <label for="customerAddress">
+                    Адрес / место доставки
+                </label>
+
+
+                <input
+                    type="text"
+                    id="customerAddress"
+                    placeholder="Например, Душанбе, Сино"
+                    required
+                >
+
+            </div>
+
+
+
+            <div class="checkout-field">
+
+                <label for="customerComment">
+
+                    Комментарий
+
+                    <span>
+                        (необязательно)
+                    </span>
+
+                </label>
+
+
+                <textarea
+                    id="customerComment"
+                    placeholder="Например, позвонить перед доставкой"
+                    rows="3"
+                ></textarea>
+
+            </div>
+
+
+
+            <div
+                class="checkout-summary"
+                id="checkoutSummary"
+            ></div>
+
+
+
+            <button
+                type="submit"
+                class="checkout-submit"
+            >
+                Подтвердить заказ →
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================
+     OLD ORDER MODAL
+========================================= -->
+
+<div
+    class="modal"
+    id="orderModal"
+>
+
+    <div class="modal-box">
+
+
+        <button
+            class="modal-close"
+            id="closeModal"
+        >
+            ×
+        </button>
+
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+
+        <h2>
+            Заказ почти готов
+        </h2>
+
+
+        <p>
+            Спасибо! Для завершения заказа
+            свяжитесь с нами через WhatsApp
+            или по телефону.
+        </p>
+
+
+        <div class="modal-actions">
+
+            <a
+                href="https://wa.me/992037486060"
+                target="_blank"
+                class="modal-whatsapp"
+            >
+                Написать в WhatsApp
+            </a>
+
+
+            <a
+                href="tel:+992901234567"
+                class="modal-phone"
+            >
+                Позвонить
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================
+     TOAST
+========================================= -->
+
+<div
+    class="toast"
+    id="toast"
+>
+    Товар добавлен в корзину ✓
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
